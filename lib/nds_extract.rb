@@ -59,7 +59,7 @@ def movies_with_directors_set(source)
   new_array = []
   row_index = 0 
   while row_index < source.length do
-    
+    dir
 end
   # GOAL: For each director, find their :movies Array and stick it in a new Array
   #
