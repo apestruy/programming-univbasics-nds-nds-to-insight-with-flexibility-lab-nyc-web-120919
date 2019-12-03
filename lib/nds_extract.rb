@@ -40,8 +40,15 @@ def movies_with_director_key(name, movies_collection)
 end 
 
 def gross_per_studio(collection)
-  
-  
+  new_hash = {}
+  row_index = 0 
+  while row_index < collection.length do
+    key = collection[row_index][:studio]
+    gross = collection[row_index][:worldwide_gross]
+    new_hash[key] = gross 
+    row_index += 1 
+  end
+  new_hash
 end 
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
   # return a Hash that includes the total worldwide_gross of all the movies from
