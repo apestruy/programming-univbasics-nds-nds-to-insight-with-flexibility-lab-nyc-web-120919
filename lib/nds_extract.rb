@@ -45,7 +45,10 @@ def gross_per_studio(collection)
   while row_index < collection.length do
     key = collection[row_index][:studio]
     gross = collection[row_index][:worldwide_gross]
-    new_hash[key] = gross 
+    if !new_hash[key] 
+      new_hash[key] = gross 
+    else 
+      new_hash[key] += gross
     row_index += 1 
   end
   new_hash
