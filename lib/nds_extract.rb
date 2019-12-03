@@ -32,7 +32,8 @@ def movies_with_director_key(name, movies_collection)
   new_array = []
   row_index = 0 
   while row_index < movies_collection.length do 
-    column_index = 0 
+    movie = movies_collection[row_index] 
+    new_array << movie_with_director_name(name, movie)
     while column_index < movies_collection[row_index].length do
       new_array << movies_collection[row_index][column_index]
       column_index += 1 
