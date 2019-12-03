@@ -49,6 +49,7 @@ def gross_per_studio(collection)
       new_hash[key] = gross 
     else 
       new_hash[key] += gross
+    end 
     row_index += 1 
   end
   new_hash
